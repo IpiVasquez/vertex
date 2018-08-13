@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "allowSyntheticDefaultImports": true,
+    "module": "es2015",
+    "noImplicitAny": false,
+    "types": []
+  },
+  "exclude": ["src/test.ts", "**/*.spec.ts"]
+}

@@ -1,0 +1,37 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo">M.F. Logo</div>
+    <div nz-menu
+         class="menu"
+         nzTheme="dark"
+         nzMode="horizontal">
+      <div class="spacer"></div>
+      <div *ngIf="!user"
+           nz-menu-item>
+        <a routerLink="/sign">Inicia sesión o regístrate</a>
+      </div>
+      <div *ngIf="user"
+           class="menu-item"
+           [ngClass]="{ selected: meta.authUser }">
+        <auth-user-informator (selected)="meta.authUser = $event"></auth-user-informator>
+      </div>
+    </div>
+  </nz-header>
+  <nz-content>
+    <div class="content">
+      <h1>Hi FPL Community!</h1>
+      <p>
+        This is my work for you and hope you enjoy it. Remember that this is a still in development
+        app and it may or may not have more support later.
+      </p>
+      <p>
+        If you have question or want to report a bug on this please report it directly with
+        me, you can find me in twitter as
+        <a target="_blank"
+           href="https://twitter.com/IpiVasquez">@IpiVasquez</a>.
+      </p>
+      <p>Enjoy! Cheers.</p>
+    </div>
+  </nz-content>
+  <nz-footer>Vasen ©2018</nz-footer>
+</nz-layout>

@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Environment sensible conf
+.env
+.env.test
+
 # compiled output
 /dist
 /tmp
@@ -25,14 +29,10 @@
 !.vscode/extensions.json
 
 # misc
-/.sass-cache
 /connect.lock
 /coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
+*.log
+/logs/*
 
 # System Files
 .DS_Store

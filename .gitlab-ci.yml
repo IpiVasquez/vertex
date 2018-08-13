@@ -1,0 +1,39 @@
+image: node:10.6.0
+
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  services:
+    - mongo
+  variables:
+    MONGO_URI: 'mongodb://mongo:27017/test'
+    SECRET: 'SH!'
+  script:
+    - npm set progress=false
+    - npm i --silent --no-optional
+    - npm run lint
+    - npm test
+    - echo 'npm test only for back end... work more test for back end and start
+      with front end'
+
+build:
+  stage: build
+  script:
+    - npm set progress=false
+    - npm i --silent --no-optional
+    - npm run build
+
+deploy:
+  stage: deploy
+  only:
+    - master
+  script:
+    - echo 'Prepare to deploy by doing:'
+    - echo '- apt-get install -yqq ruby2.3 ruby2.3-dev --silent'
+    - echo '- gem install dpl'
+    - echo '- npm run build'
+    - echo '- dpl --provider=wherever --app=awesome --etc=research'

@@ -1,0 +1,5 @@
+{
+  "watch": ["api"],
+  "ext": "ts",
+  "exec": "TS=true ts-node -r tsconfig-paths/register api"
+}
