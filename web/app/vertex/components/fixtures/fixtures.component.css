@@ -115,6 +115,7 @@ main > div.fixtures .fixture p.text {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .modal-content table {

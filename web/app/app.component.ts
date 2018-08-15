@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from 'app/core/database.service';
-import { ConfigService } from 'app/core/config.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +6,5 @@ import { ConfigService } from 'app/core/config.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private db: DatabaseService, private config: ConfigService) {}
+  constructor() {}
 }

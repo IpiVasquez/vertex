@@ -9,7 +9,7 @@ import { TableComponent } from './components/table/table.component';
 
 const routes: Routes = [
   {
-    path: 'vertex',
+    path: '',
     component: VertexLeagueView,
     children: [
       { path: '', redirectTo: 'fixtures', pathMatch: 'full' },
