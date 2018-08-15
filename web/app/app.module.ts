@@ -5,23 +5,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { AboutModule } from 'app/about/about.module';
-import { ShellModule } from 'app/shell/shell.module';
-import { AuthModule } from 'app/auth/auth.module';
 import { CoreModule } from 'app/core/core.module';
 import { AppComponent } from 'app/app.component';
+import { VertexModule } from 'app/vertex/vertex.module';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
+    RouterModule,
     // Core module must go here so api interceptor works before modules below
     CoreModule,
-    AboutModule,
     // Auth module must go here so auth interceptor works before Shell
-    AuthModule,
-    ShellModule,
+    VertexModule,
     BrowserAnimationsModule,
     FormsModule,
     NgZorroAntdModule

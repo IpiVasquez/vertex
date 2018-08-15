@@ -5,9 +5,11 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm i
 
-COPY src ./src
-COPY gulpfile.ts tsconfig.json ./
+COPY web ./web
+COPY api ./api
+COPY assets ./assets
+COPY gulpfile.ts tsconfig.json angular.json ./
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE $PORT
 CMD ["npm", "start"]

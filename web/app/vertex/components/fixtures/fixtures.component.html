@@ -1,0 +1,94 @@
+<main>
+  <div class="fixtures">
+    <div class="fixture"
+         *ngFor="let f of gameweeks[gw - 1]"
+         (click)="showCard(f.home, f.away)">
+      <div class="home">
+        <p class="text">{{teams[f.home].name}}</p>
+        <span class="badge-25 {{teams[f.home].shortName}}"></span>
+      </div>
+      <div class="score text">
+        <span>{{reduce(teams[f.home].scores[gw - 1])}}</span>
+        <span>-</span>
+        <span>{{reduce(teams[f.away].scores[gw - 1])}}</span>
+      </div>
+      <div class="away">
+        <span class="badge-25 {{teams[f.away].shortName}}"></span>
+        <p class="text">{{teams[f.away].name}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="pagination">
+    <nz-pagination [nzPageIndex]="gw"
+                   (nzPageIndexChange)="gw = $event"
+                   [nzTotal]="gameweeks.length"
+                   [nzPageSize]="1"
+                   nzSimple></nz-pagination>
+  </div>
+</main>
+
+<ng-template #modalTitle>
+  <div class="modal-title">
+    <span class="badge-25 {{teams[meta.home].shortName}}"></span>
+    <div class="score">
+      <span>{{reduce(teams[meta.home].scores[gw - 1])}}</span>
+      <span>-</span>
+      <span>{{reduce(teams[meta.away].scores[gw - 1])}}</span>
+    </div>
+    <span class="badge-25 {{teams[meta.away].shortName}}"></span>
+  </div>
+</ng-template>
+
+<nz-modal [(nzVisible)]="meta.modalVisible"
+          [nzTitle]="modalTitle"
+          [nzFooter]="modalFooter"
+          (nzOnOk)="meta.modalVisible = false"
+          (nzOnCancel)="meta.modalVisible = false">
+  <div class="modal-content">
+    <table>
+      <tr>
+        <th class="table-title"
+            colspan="3">{{teams[meta.home].name}}</th>
+      </tr>
+      <tr>
+        <th>Player</th>
+        <th>ID</th>
+        <th>Score</th>
+      </tr>
+      <tr *ngFor="let i of makeArray(teams[meta.home].players)">
+        <td><a href="https://twitter.com/{{teams[meta.home].playerTwitters[i]}}"
+
+             target="_blank">{{teams[meta.home].playerTwitters[i]}}</a></td>
+        <td><a [href]="getUrl(teams[meta.home].players[i], gw)"
+             target="_blank">{{teams[meta.home].players[i]}}</a></td>
+        <td>{{teams[meta.home].scores[gw - 1][i]}}</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th class="table-title"
+            colspan="3">{{teams[meta.away].name}}</th>
+      </tr>
+      <tr>
+        <th>Player</th>
+        <th>ID</th>
+        <th>Score</th>
+      </tr>
+      <tr *ngFor="let i of makeArray(teams[meta.away].players)">
+        <td><a href="https://twitter.com/{{teams[meta.away].playerTwitters[i]}}"
+
+             target="_blank">{{teams[meta.away].playerTwitters[i]}}</a></td>
+        <td><a [href]="getUrl(teams[meta.away].players[i], gw)"
+             target="_blank">{{teams[meta.away].players[i]}}</a></td>
+        <td>{{teams[meta.away].scores[gw - 1][i]}}</td>
+      </tr>
+    </table>
+  </div>
+</nz-modal>
+
+<ng-template #modalFooter>
+  <button nz-button
+          nzType="primary"
+          (click)="meta.modalVisible = false">OK</button>
+</ng-template>

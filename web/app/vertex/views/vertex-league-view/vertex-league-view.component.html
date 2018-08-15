@@ -1,0 +1,28 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div>
+      <img src="/assets/image.png">
+      <div class="logo">FPL Vertex!</div>
+      <div nz-menu
+           class="menu"
+           nzTheme="dark"
+           nzMode="horizontal">
+        <div class="menu-item"
+             routerLink="fixtures">Fixtures</div>
+        <div class="menu-item"
+             routerLink="table">Table</div>
+        <div class="spacer"></div>
+      </div>
+    </div>
+  </nz-header>
+  <nz-content *ngIf="!ready"
+              class="spinner">
+    <nz-spin nzSize="large"
+             nzTip="Connecting to FPL ..."></nz-spin>
+    <router-outlet *ngIf="ready"></router-outlet>
+  </nz-content>
+  <nz-content *ngIf="ready"
+              class="content">
+    <router-outlet *ngIf="ready"></router-outlet>
+  </nz-content>
+</nz-layout>

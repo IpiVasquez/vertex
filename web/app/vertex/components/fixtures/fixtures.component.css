@@ -1,0 +1,212 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+
+main > div.fixtures .fixture:first-child {
+  border-top: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+main > div.fixtures .fixture {
+  padding: 0px 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  cursor: pointer;
+}
+
+main > div.fixtures .fixture:hover {
+  background: #e90052;
+  color: white;
+}
+
+main > div.fixtures .fixture > * {
+  padding: 10px 2px;
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+main > div.fixtures .fixture > .home {
+  justify-content: flex-end;
+  width: 35%;
+}
+
+main > div.fixtures .fixture > .away {
+  justify-content: flex-start;
+  width: 35%;
+}
+
+main > div.fixtures .fixture > .score {
+  border: 1px rgba(0, 0, 0, 0.3) solid;
+  background: rgb(56, 0, 60);
+  color: white;
+  border-radius: 3px;
+  padding: 3px;
+  width: 20%;
+  height: 100%;
+  margin: auto 10px;
+  font-weight: normal;
+  padding-top: 0.4em;
+  white-space: nowrap;
+}
+
+main > div.fixtures .fixture > .score > * {
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+}
+
+main > div.fixtures .fixture p.text {
+  margin: auto 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge-25 {
+  background-image: url('/assets/badges-25-sprite.png');
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  display: block;
+  background-position: -25px -350px;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-title > * {
+  margin: 0 10px;
+}
+
+.modal-title .score {
+  border: 1px rgba(0, 0, 0, 0.3) solid;
+  background: rgb(56, 0, 60);
+  color: white;
+  border-radius: 3px;
+  padding: 3px;
+  width: 20%;
+  height: 100%;
+  margin: auto 10px;
+  font-weight: normal;
+  padding-top: 0.4em;
+  white-space: nowrap;
+}
+
+.modal-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.modal-content table {
+  width: 40%;
+}
+
+.modal-content table .table-title {
+  background: #560060;
+}
+
+.modal-content th {
+  background: #e90052;
+  color: white;
+  font-weight: bold;
+}
+
+.modal-content table,
+.modal-content tr,
+.modal-content th,
+.modal-content td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+.modal-content tr:nth-child(odd) {
+  background-color: #dfdfdf;
+}
+
+.modal-title .score > * {
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+}
+
+.badge-25.ARS {
+  background-position: 0 -50px;
+}
+.badge-25.BHA {
+  background-position: -100px -100px;
+}
+.badge-25.BOU {
+  background-position: -50px -125px;
+}
+.badge-25.BUR {
+  background-position: -25px -150px;
+}
+.badge-25.CAR {
+  background-position: -75px -150px;
+}
+.badge-25.CHE {
+  background-position: -150px -150px;
+}
+.badge-25.CRY {
+  background-position: -50px -175px;
+}
+.badge-25.EVE {
+  background-position: 0 -200px;
+}
+.badge-25.FUL {
+  background-position: -225px -100px;
+}
+.badge-25.HUD {
+  background-position: -75px -225px;
+}
+.badge-25.LEI {
+  background-position: -250px -125px;
+}
+.badge-25.LIV {
+  background-position: -250px -225px;
+}
+.badge-25.MCI {
+  background-position: -250px -250px;
+}
+.badge-25.MUN {
+  background-position: -275px -200px;
+}
+.badge-25.NEW {
+  background-position: -275px -250px;
+}
+.badge-25.SOU {
+  background-position: -325px -250px;
+}
+.badge-25.TOT {
+  background-position: -275px -325px;
+}
+.badge-25.WAT {
+  background-position: -350px -50px;
+}
+.badge-25.WHU {
+  background-position: -350px -100px;
+}
+.badge-25.WOL {
+  background-position: -350px -225px;
+}

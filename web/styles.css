@@ -7,10 +7,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  overflow-y: hidden;
 }
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   width: 6px;
   background: transparent;
 }
@@ -24,7 +23,7 @@ body {
 *::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.2);
-}
+} */
 
 :root {
   --header-height: 46px;

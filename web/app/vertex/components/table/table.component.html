@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <th class="table-title"
+        colspan="8">Standings</th>
+  </tr>
+  <tr>
+    <th>Team</th>
+    <th>GP</th>
+    <th>CV</th>
+    <th>MV</th>
+    <th>T</th>
+    <th>ML</th>
+    <th>CL</th>
+    <th>Points</th>
+  </tr>
+  <tr *ngFor="let team of table">
+    <td>{{team.name}}</td>
+    <td>{{team.matches}}</td>
+    <td>{{team.clearVictories}}</td>
+    <td>{{team.marginalVictories}}</td>
+    <td>{{team.ties}}</td>
+    <td>{{team.marginalLost}}</td>
+    <td>{{team.clearLost}}</td>
+    <td>{{team.points}}</td>
+  </tr>
+</table>

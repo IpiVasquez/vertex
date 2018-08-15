@@ -5,7 +5,6 @@
 .env.test
 
 # compiled output
-/dist
 /tmp
 /out-tsc
 

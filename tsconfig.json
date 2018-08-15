@@ -7,7 +7,7 @@
     "declaration": false,
     "moduleResolution": "node",
     "module": "commonjs",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",

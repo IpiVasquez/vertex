@@ -4,13 +4,14 @@ import * as express from 'express';
 import * as cors from 'cors';
 import * as path from 'path';
 
+import { bootstrap } from 'api/core/lib/bootstrap';
 import { mongoConnect } from 'api/config';
 import { masterLogger } from 'api/lib';
-import { auth } from 'api/auth';
+import { Team } from 'api/core/models';
 import { core } from 'api/core';
 
 const logger = masterLogger.getLogger('metapos', 'app');
-const modules = [core, auth];
+const modules = [core];
 const apiUri = '/api';
 
 export class Metapos {
@@ -38,6 +39,7 @@ export class Metapos {
     this.app.use(express.static(ngPath));
     this.app.get('*', (req: Request, res: Response) => {
       res.sendFile(path.join(ngPath, 'index.html'));
+      logger.silly(`url: ${req.url}`);
       logger.debug('Angular app served');
     });
     await mongoConnect(this.dbUri);
@@ -75,10 +77,26 @@ export class Metapos {
         });
       }
     );
+
+    this.bootstrap();
   }
 
   initModules() {
     modules.forEach(m => m.init(this));
+  }
+
+  async bootstrap() {
+    try {
+      const teams = await Team.find({});
+      if (!teams.length || process.env.BOOTSTRAP) {
+        logger.info('Bootstraping');
+        await bootstrap();
+      } else {
+        logger.info('Already bootstraped');
+      }
+    } catch (e) {
+      logger.error('Failed while bootstraping: ' + e.message);
+    }
   }
 
   /**

@@ -33,6 +33,10 @@ export class Logger {
             timestamp(),
             printf(this.consoleFormat.bind(this))
           )
+        }),
+        new winston.transports.File({
+          filename: 'error.log',
+          level: 'error'
         })
       ]
     });

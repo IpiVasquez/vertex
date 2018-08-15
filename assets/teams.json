@@ -1,0 +1,262 @@
+[
+  {
+    "code": 3,
+    "name": "Arsenal",
+    "shortName": "ARS",
+    "players": [258, 95432, 102808, 10100, 742],
+    "playerTwitters": [
+      "NymfriaTV",
+      "fplbooster",
+      "FplUnicorn",
+      "stevo_v",
+      "James_Twiddy_4"
+    ]
+  },
+  {
+    "code": 91,
+    "name": "Bournemouth",
+    "shortName": "BOU",
+    "players": [1488, 233191, 940316, 172659, 6359],
+    "playerTwitters": [
+      "FPLTIPZ",
+      "bkbaz2011",
+      "enomis1993",
+      "fpl_idfl",
+      "FplLuke"
+    ]
+  },
+  {
+    "code": 36,
+    "name": "Brighton",
+    "shortName": "BHA",
+    "players": [57716, 83809, 153389, 616459, 27551],
+    "playerTwitters": [
+      "enuymbre",
+      "fplexpert44",
+      "Cycling_Crazy",
+      "FPLRC",
+      "h0wesy"
+    ]
+  },
+  {
+    "code": 90,
+    "name": "Burnley",
+    "shortName": "BUR",
+    "players": [6319, 260732, 333, 72984, 86513],
+    "playerTwitters": [
+      "FPLVinnie",
+      "ClaretFPL",
+      "speedyboyz",
+      "firman7syah",
+      "ArieFerdana"
+    ]
+  },
+  {
+    "code": 97,
+    "name": "Cardiff",
+    "shortName": "CAR",
+    "players": [299562, 617899, 68694, 882820, 64638],
+    "playerTwitters": [
+      "FplSwan",
+      "FPLcentre",
+      "utdfan96",
+      "FantasyAlgo",
+      "FPLHobbs"
+    ]
+  },
+  {
+    "code": 8,
+    "name": "Chelsea",
+    "shortName": "CHE",
+    "players": [1164, 345111, 2428, 590820, 11075],
+    "playerTwitters": [
+      "FPL_Batman",
+      "dave07smith",
+      "FPL_physio",
+      "FPL_Chelsea",
+      "justmihir"
+    ]
+  },
+  {
+    "code": 31,
+    "name": "Crystal Palace",
+    "shortName": "CRY",
+    "players": [3840, 330, 65567, 1439, 1246],
+    "playerTwitters": [
+      "FantasianPL",
+      "Migtavius",
+      "fpl_iain",
+      "FPLJamal",
+      "Matt01979"
+    ]
+  },
+  {
+    "code": 11,
+    "name": "Everton",
+    "shortName": "EVE",
+    "players": [1985, 2936, 30502, 474259, 52364],
+    "playerTwitters": [
+      "fpl_tornado",
+      "amalcolm14",
+      "talha_nadeem_90",
+      "Rohan2693",
+      "slavestothefpl"
+    ]
+  },
+  {
+    "code": 54,
+    "name": "Fulham",
+    "shortName": "FUL",
+    "players": [21663, 59683, 2070, 8912, 9252],
+    "playerTwitters": [
+      "fplwixard",
+      "HishoFPL",
+      "darpit_kunder",
+      "GunnerGrxnit",
+      "TheTinkerMen"
+    ]
+  },
+  {
+    "code": 38,
+    "name": "Huddersfield",
+    "shortName": "HUD",
+    "players": [512, 953318, 2765, 1022350, 935734],
+    "playerTwitters": [
+      "roger_sen",
+      "zedd_kay",
+      "deepeshn8",
+      "partha23",
+      "amirmehta_"
+    ]
+  },
+  {
+    "code": 13,
+    "name": "Leicester",
+    "shortName": "LEI",
+    "players": [1800, 2248, 11820, 40982, 80813],
+    "playerTwitters": [
+      "_FPLFox",
+      "I_am_shiv05",
+      "Aaronzford98_",
+      "rvp_sunny",
+      "NJRhon"
+    ]
+  },
+  {
+    "code": 14,
+    "name": "Liverpool",
+    "shortName": "LIV",
+    "players": [259811, 93089, 810, 7180, 315],
+    "playerTwitters": [
+      "giridharasg",
+      "Rohit_Mohan8",
+      "WhattheFPL",
+      "FPLFanatix",
+      "FPL_LocoLord"
+    ]
+  },
+  {
+    "code": 43,
+    "name": "Man City",
+    "shortName": "MCI",
+    "players": [111203, 20285, 20285, 21810, 834764],
+    "playerTwitters": [
+      "FPLUNIQUE",
+      "FPLmeh",
+      "Mo_ehab10",
+      "FPLPringle",
+      "DanielThorpe1"
+    ]
+  },
+  {
+    "code": 1,
+    "name": "Man Utd",
+    "shortName": "MUN",
+    "players": [1695, 460902, 1459, 65233, 4291],
+    "playerTwitters": [
+      "Varun_esque",
+      "CanadianRom",
+      "Adslyer",
+      "adinislamy",
+      "KeyurLakhani4"
+    ]
+  },
+  {
+    "code": 4,
+    "name": "Newcastle",
+    "shortName": "NEW",
+    "players": [1192, 7041, 3904, 1804, 9633],
+    "playerTwitters": [
+      "fpl_planner",
+      "StuLord",
+      "Gallow111",
+      "Mumbai_Monster",
+      "AndrewMusetti"
+    ]
+  },
+  {
+    "code": 20,
+    "name": "Southampton",
+    "shortName": "SOU",
+    "players": [50688, 437, 3995, 150, 1221275],
+    "playerTwitters": [
+      "FPL_gaffer",
+      "lucyhighnett",
+      "FPL_Finn",
+      "FPL_ELStatto",
+      "FPLSWOT"
+    ]
+  },
+  {
+    "code": 6,
+    "name": "Spurs",
+    "shortName": "TOT",
+    "players": [2778434, 8329, 12709, 2477, 70448],
+    "playerTwitters": [
+      "Fantasy_Enzo",
+      "riuzuna",
+      "adambeasley92",
+      "Wise_Cricket",
+      "fplchancer"
+    ]
+  },
+  {
+    "code": 57,
+    "name": "Watford",
+    "shortName": "WAT",
+    "players": [757, 84829, 1443167, 640421, 8675],
+    "playerTwitters": [
+      "medeniemre",
+      "DPG124",
+      "Panda_Da_Don",
+      "drsbravo",
+      "FPL_JJ"
+    ]
+  },
+  {
+    "code": 21,
+    "name": "West Ham",
+    "shortName": "WHU",
+    "players": [395, 3539, 929915, 3604, 348123],
+    "playerTwitters": [
+      "fplAimar",
+      "FplAddict123",
+      "Becks_Singwane",
+      "ShamilG",
+      "NRawoojee"
+    ]
+  },
+  {
+    "code": 39,
+    "name": "Wolves",
+    "shortName": "WOL",
+    "players": [67554, 57094, 10931, 744, 2223],
+    "playerTwitters": [
+      "FPL_Ipi",
+      "parker_bradley",
+      "FPL_conundrum",
+      "FPL_Finesse",
+      "FPL_FC"
+    ]
+  }
+]

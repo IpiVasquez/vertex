@@ -7,12 +7,14 @@
     "nodemon": "nodemon",
     "dev": "ng serve & nodemon",
     "build": "gulp build && ng build --prod",
-    "test": "mocha test/*.spec.ts test/**/*.spec.ts",
-    "lint": "ng lint && gulp lint",
-    "e2e": "ng e2e"
+    "test": "echo 'No tests'",
+    "lint": "ng lint && gulp lint"
   },
   "_moduleAliases": {
     "api": "dist"
+  },
+  "engines": {
+    "node": "10.8.0"
   },
   "private": true,
   "dependencies": {

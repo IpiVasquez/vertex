@@ -1,5 +1,0 @@
-# mocha tests options
-
---exit
---require ts-node/register
---require tsconfig-paths/register

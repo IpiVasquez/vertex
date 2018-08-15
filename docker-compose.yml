@@ -2,17 +2,14 @@ version: '2'
 services:
   api:
     build: .
-    container_name: 'metapos-api'
+    container_name: 'vertex'
     image: debian/latest
     environment:
       - NODE_ENV=PRODUCTION
-      - FOO=bar
-      - DEBUG=*,-express*,-send,-mquery*,-follow*,-body*
-      - LOG_LEVEL=info
-      - MONGO_URI=mongodb://mongodb:27017/metapos
+      - LOG_LEVEL=silly
+      - MONGO_URI=mongodb://mongodb:27017/vertex
       - SECRET='super secret!'
       - PORT=3000
-      - G_CLIENT_ID=945928903179-094k8q5lg0eknahtpt6fd1bg837hvdf6.apps.googleusercontent.com
     volumes:
       - .:/var/www:rw
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
@@ -24,7 +21,7 @@ services:
       - mongodb
   mongodb:
     image: mongo:latest
-    container_name: 'mongo'
+    container_name: 'v-mongo'
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
