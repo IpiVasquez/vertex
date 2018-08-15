@@ -1,4 +1,5 @@
 <main>
+  <h2>{{statics.events[gw - 1].name}}</h2>
   <div class="fixtures">
     <div class="fixture"
          *ngFor="let f of gameweeks[gw - 1]"
@@ -19,8 +20,7 @@
     </div>
   </div>
   <div class="pagination">
-    <nz-pagination [nzPageIndex]="gw"
-                   (nzPageIndexChange)="gw = $event"
+    <nz-pagination [(nzPageIndex)]="gw"
                    [nzTotal]="gameweeks.length"
                    [nzPageSize]="1"
                    nzSimple></nz-pagination>
@@ -44,7 +44,8 @@
           [nzFooter]="modalFooter"
           (nzOnOk)="meta.modalVisible = false"
           (nzOnCancel)="meta.modalVisible = false">
-  <div class="modal-content">
+  <div *ngIf="statics.events[gw - 1].current || statics.events[gw - 1].finished"
+       class="modal-content">
     <table>
       <tr>
         <th class="table-title"
@@ -84,6 +85,10 @@
         <td>{{teams[meta.away].scores[gw - 1][i]}}</td>
       </tr>
     </table>
+  </div>
+
+  <div *ngIf="!statics.events[gw - 1].current && !statics.events[gw - 1].finished">
+    I can't see the future mate.
   </div>
 </nz-modal>
 

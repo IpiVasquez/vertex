@@ -81,7 +81,7 @@
     "code": 31,
     "name": "Crystal Palace",
     "shortName": "CRY",
-    "players": [3840, 330, 65567, 1439, 1246],
+    "players": [3840, 1439, 1246, 330, 65567],
     "playerTwitters": [
       "FantasianPL",
       "Migtavius",
@@ -198,7 +198,7 @@
     "code": 20,
     "name": "Southampton",
     "shortName": "SOU",
-    "players": [50688, 437, 3995, 150, 1221275],
+    "players": [50688, 437, 3395, 150, 1221275],
     "playerTwitters": [
       "FPL_gaffer",
       "lucyhighnett",

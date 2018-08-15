@@ -10,7 +10,7 @@ export class FixturesComponent implements OnInit {
   gameweeks: Model.Fixture[][] = [];
   statics: Model.BootstrapStatic;
   teams: Model.Team[] = [];
-  gw = 0;
+  gw = 1;
   meta = {
     modalVisible: false,
     home: 0,
@@ -30,19 +30,22 @@ export class FixturesComponent implements OnInit {
     });
   }
 
+  previousGW() {
+    this.gw--;
+  }
+
+  nextGW() {
+    this.gw++;
+  }
+
   reduce(scores: number[] = []): string {
     return scores.length ? scores.reduce((acc, v) => acc + v, 0) + '' : '';
   }
 
   showCard(a: number, b: number) {
-    if (
-      this.statics.events[this.gw - 1].current ||
-      this.statics.events[this.gw - 1].finished
-    ) {
-      this.meta.modalVisible = true;
-      this.meta.home = a;
-      this.meta.away = b;
-    }
+    this.meta.modalVisible = true;
+    this.meta.home = a;
+    this.meta.away = b;
   }
 
   makeArray(arr: any[] = []): number[] {

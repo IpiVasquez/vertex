@@ -8,7 +8,8 @@
     "dev": "ng serve & nodemon",
     "build": "gulp build && ng build --prod",
     "test": "echo 'No tests'",
-    "lint": "ng lint && gulp lint"
+    "lint": "ng lint && gulp lint",
+    "postinstall": "gulp build && ng build --prod"
   },
   "_moduleAliases": {
     "api": "dist"

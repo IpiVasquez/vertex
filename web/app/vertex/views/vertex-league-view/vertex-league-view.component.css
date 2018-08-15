@@ -42,6 +42,7 @@ nz-layout > nz-header div.menu > .menu-item {
   border-radius: 3px;
   padding: 0 10px;
   padding-top: 3px;
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin: auto 5px;
 }
