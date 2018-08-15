@@ -46,6 +46,7 @@ function mongoConnect(uri) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
+                    logger.info('Mongo DB at: ' + uri);
                     return [4 /*yield*/, mongoose.connect(uri, { useNewUrlParser: true })];
                 case 1:
                     _a.sent();

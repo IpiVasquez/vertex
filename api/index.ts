@@ -26,7 +26,10 @@ process.on('unhandledRejection', err =>
 );
 // Need to be provided at .env
 const port = Number(process.env.PORT);
-const mongoUri = process.env.MONGO_URI;
+const mongoUri =
+  process.env.MONGODB_URI ||
+  process.env.MONGOHQ_URL ||
+  process.env.MONGOLAB_URI;
 
 logger.verbose('Creating app');
 const metapos = new Metapos(mongoUri, port);

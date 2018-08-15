@@ -24,7 +24,9 @@ process.on('unhandledRejection', function (err) {
 });
 // Need to be provided at .env
 var port = Number(process.env.PORT);
-var mongoUri = process.env.MONGO_URI;
+var mongoUri = process.env.MONGODB_URI ||
+    process.env.MONGOHQ_URL ||
+    process.env.MONGOLAB_URI;
 logger.verbose('Creating app');
 var metapos = new app_1.Metapos(mongoUri, port);
 var server = http.createServer(metapos.app);

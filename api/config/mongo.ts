@@ -6,6 +6,7 @@ const logger = masterLogger.getLogger('config:mongo', 'config');
 
 export async function mongoConnect(uri = process.env.MONGO_URI) {
   try {
+    logger.info('Mongo DB at: ' + uri);
     await mongoose.connect(
       uri,
       { useNewUrlParser: true }
